@@ -11,7 +11,7 @@
     "core-js": "^3.6.5",
     "file-saver": "^2.0.5",
     "pug": "^3.0.2",
-    "raw-loader": "4.0.1",
+    "raw-loader": "^4.0.2",
     "vue": "^2.6.11",
     "vue-advanced-cropper": "^1.9.0"
   },
