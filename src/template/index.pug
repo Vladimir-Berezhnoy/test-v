@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    style.
+      a {
+        display: inline-block;
+      }
+      .position-left {
+        position: absolute;
+        left: 0;
+      }
+      .position-right {
+        position: absolute;
+        right: 0;
+      }
+      .left {
+        transform: translateX(calc(-100vw + 105%));
+        transition: all 5s ease-out;
+      }
+      .right {
+        transform: translateX(calc(100vw - 105%));
+        transition: all 5s ease-out;
+      }
+  body
+    a(href=url class=direction === 'left' ? 'position-left' : 'position-right')
+      img#image(src=href)
+    script.
+      const image = document.querySelector("a")
+      window.onload = function (){
+        if (image.classList.contains('position-left')) {
+          image.classList.add("right");
+        } else {
+          image.classList.add("left");
+        }
+      }
+        
